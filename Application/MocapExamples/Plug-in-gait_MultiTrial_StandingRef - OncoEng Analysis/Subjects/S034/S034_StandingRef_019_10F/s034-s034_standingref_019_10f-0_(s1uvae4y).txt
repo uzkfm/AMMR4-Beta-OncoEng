@@ -1,0 +1,147 @@
+########### MACRO #############
+load "main.any"
+operation Main.RunParameterIdentification
+run
+
+######### OUTPUT LOG ##########
+
+AnyBody Console Application
+AnyBodyCon.exe version : 8. 1. 4. 12797 (64-bit version) 
+Build : 20335.48780
+Copyright (c) 1999 - 2025 AnyBody Technology A/S
+
+Current path: C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Application\MocapExamples\Plug-in-gait_MultiTrial_StandingRef - OncoEng Analysis\Subjects\S034\S034_StandingRef_019_10F
+#### Macro command > load "main.any"
+Loading  Main  :  "C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Application\MocapExamples\Plug-in-gait_MultiTrial_StandingRef - OncoEng Analysis\Subjects\S034\S034_StandingRef_019_10F\main.any"
+Scanning...
+Parsing...
+Constructing model tree...
+Linking identifiers...
+Evaluating constants...
+Configuring model...
+Evaluating model...
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(SCR.EXP.FUN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\CheckAnyMoCapConfiguration.any(77)  :   'filter_transients_warning' : 'warn' triggered : 
+------------------------------------------------------------------------------------------------------
+    The tStart/tEnd are very close to the start/end times of the data in the C3D file. 
+    This can cause inaccurate kinematics at the very start/end of the simulation due to 
+    low-pass filter transients. Consider changing the start/end times of the simulation. 
+-------------------------------------------------------------------------------------------------------
+
+WARNING(SCR.EXP.FUN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\InitialPositions.any(71)  :   'AbductionInitialPosturePertubation' : 'warn' triggered : 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+         WARNING: Problematic start mannequin values for GlenohumeralFlexion/GlenohumeralAbduction. 
+ 
+  The initial postures (mannequin values) GlenohumeralFlexion (0 deg) and GlenohumeralAbduction (0 deg) can cause problems as initial because 
+  some measures/drivers which uses on the humurus 'plane of elevation' (i.e. shoulder rhythm) have a sigularity at these angles. 
+  
+  A small pertubation to the inital values for the humeral abduction have automatically been applied. 
+  
+  You can avoid this warning by changing the values in HumanModel.Mannequin.Posture
+  or by setting the one of the following statements to suppress either the warning or disable the automatic small pertubation: 
+      #define ANYBODY_DISABLE_HUMMERAL_ABTUCTION_PERTUBATION_WARNING 
+      #define ANYBODY_DISABLE_HUMMERAL_ABTUCTION_PERTUBATION 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Model Warning: Study 'Main.HumanModel.Calibration.ThoraxLigamentCalibration.CalibrationStudy' contains too few kinematic constraints to be kinematically determinate.
+Model Warning: Study 'Main.HumanModel.Calibration.ThoraxLigamentCalibration.CalibrationStudy' contains too few kinematic constraints to be kinematically determinate.
+Loaded successfully.
+Elapsed Time : 23.065000
+#### Macro command > operation Main.RunParameterIdentification
+#### Macro command > run
+
+***************************************************************************************
+0) Operation Sequence: (Operation: Main.RunParameterIdentification): 
+0.0) Operation Sequence: (Operation: Main.RunParameterIdentification.ParameterIdentification): 
+0.0.0) Dummy operation: (Operation: Main.RunParameterIdentification.ParameterIdentification.placeholder_operation): 
+0.1.0) Kinematic optimization (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+0.1.0.0) Operation Sequence: (Operation: Main.Studies.ParameterIdentification.Analysis): 
+0.1.0.0.0) Kinematics (Operation: Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.Kinematics): 
+0.1.0.0.0.0) PreOperation (Operation: Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.Kinematics.PreOperation): 
+0.1.0.0.0.0.0) InitialConditions (Operation: Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.InitialConditions): 
+0.1.0.0.0.0.0) ...Design variables have been updated.
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+0.1.0.0.0.0.1) ...Load-time positions have been re-established.
+0.1.0.0.0.0.1.0) PreOperation (Operation: Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.InitialConditions.PreOperation): 
+0.1.0.0.0.0.1.0.0) Operation Sequence: (Operation: Main.ModelSetup.Views.SetViewMacros.KinematicView): 
+0.1.0.0.0.0.1.0.0.0) mcr (Operation: Main.ModelSetup.Views.SetViewMacros.KinematicView.mcr): 
+#### Macro command : mcr(1:1)> classoperation Main.ModelSetup.Views.KinematicView"Set View"
+Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Failed to solve kinematic optimality conditions and hard constraints after 10 fallback attempts.
+Constraint violations for study 'Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification' : 
+ERROR(OBJ.MCH.KIN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\KinematicStudyForParameterIdentification.any(11)  :   'KinematicStudyForParameterIdentification.InitialConditions'  :  Kinematic analysis failed in time step 0 : Position analysis is not completed
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\KinematicStudyForParameterIdentification.any(11)  :   'KinematicStudyForParameterIdentification.InitialConditions'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\KinematicStudyForParameterIdentification.any(11)  :   'KinematicStudyForParameterIdentification.Kinematics.PreOperation'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.0.0) Kinematic analysis...
+Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.0.1.0.0.19) ...Kinematic analysis completed
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\KinematicStudyForParameterIdentification.any(11)  :   'KinematicStudyForParameterIdentification.Kinematics'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.Analysis'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.0) Optimization (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+0.1.0.0.0) Optimization step (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+0.1.0.0.0.0) Evaluating KKT conditions (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.0.0.0) Evaluating the objective function (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.0.0.0) Calculating a new search direction (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0) Optimization step (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+0.1.0.1.0.0) Evaluating KKT conditions (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+Previous AbsSumKinError before decrease of step length: 40.7779060.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Evaluating the objective function (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.1.0.0) Calculating a new search direction (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+0.1.0.2.0) Optimization step (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+0.1.0.2.0.0) Evaluating KKT conditions (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+Previous AbsSumKinError before decrease of step length: 40.7779040.1.0.2.0.0) Evaluating KKT conditions while decreasing step length (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+NOTICE(OBJ.OPR1) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Operation finished with non-fatal errors. Please verify whether these errors are acceptable.
+Failed to resolve kinematic constraints. Newton relaxation too small. (final kin. error = 3.530050E+00)Constraint no. 20340 above error tolerance 0.000100, error = 0.2127439615135.Constraint no. 20341 above error tolerance 0.000100, error = 2.3467879102077.Constraint no. 20342 above error tolerance 0.000100, error = 1.3723574700115.Constraint no. 20343 above error tolerance 0.000100, error = 3.5300498719100.Constraint no. 20344 above error tolerance 0.000100, error = 2.5891295176324.Constraint no. 20345 above error tolerance 0.000100, error = 2.1575742828898.Constraint no. 20346 above error tolerance 0.000100, error = 0.2429974641763.Constraint no. 20347 above error tolerance 0.000100, error = 0.2946862498147.Constraint no. 20348 above error tolerance 0.000100, error = 0.5131750589237.Constraint no. 20349 above error tolerance 0.000100, error = 0.0140308093170.Constraint no. 20350 above error tolerance 0.000100, error = 0.4099213656955.Constraint no. 20351 above error tolerance 0.000100, error = 0.3326884523157.Constraint no. 20352 above error tolerance 0.000100, error = 0.1215882424975.Constraint no. 20353 above error tolerance 0.000100, error = 0.5383824258567.Constraint no. 20354 above error tolerance 0.000100, error = 0.0011621891693.Constraint no. 20355 above error tolerance 0.000100, error = 0.5122533128146.Constraint no. 20356 above error tolerance 0.000100, error = 0.2869346497878.Constraint no. 20357 above error tolerance 0.000100, error = 0.2510827814332.Constraint no. 20358 above error tolerance 0.000100, error = 0.2784590544624.Constraint no. 20359 above error tolerance 0.000100, error = 0.1792043082450.Constraint no. 20360 above error tolerance 0.000100, error = 0.6131867409359.Constraint no. 20361 above error tolerance 0.000100, error = 1.5178273902688.Constraint no. 20362 above error tolerance 0.000100, error = 0.2028211151257.Constraint no. 20363 above error tolerance 0.000100, error = 0.1500677727421.Constraint no. 20364 above error tolerance 0.000100, error = 0.3028366400222.Constraint no. 20365 above error tolerance 0.000100, error = 0.3882408787840.Constraint no. 20366 above error tolerance 0.000100, error = 0.2390547270672.Constraint no. 20367 above error tolerance 0.000100, error = 0.5502507759053.Constraint no. 20368 above error tolerance 0.000100, error = 0.5908370951210.Constraint no. 20369 above error tolerance 0.000100, error = 0.6197302522224.Constraint no. 20370 above error tolerance 0.000100, error = 0.5836729055500.Constraint no. 20371 above error tolerance 0.000100, error = 0.6231828745274.Constraint no. 20372 above error tolerance 0.000100, error = 0.8652288765917.Constraint no. 20373 above error tolerance 0.000100, error = 2.1059748254205.Constraint no. 20374 above error tolerance 0.000100, error = 1.3816953199091.Constraint no. 20375 above error tolerance 0.000100, error = 0.4910153118062.Constraint no. 20376 above error tolerance 0.000100, error = 0.8032100932078.Constraint no. 20377 above error tolerance 0.000100, error = 0.1973505158442.Constraint no. 20378 above error tolerance 0.000100, error = 0.0219853267714.Constraint no. 20379 above error tolerance 0.000100, error = 0.4612129893112.Constraint no. 20380 above error tolerance 0.000100, error = 0.0108664663700.Constraint no. 20381 above error tolerance 0.000100, error = 0.4259844257556.Constraint no. 20382 above error tolerance 0.000100, error = 1.7722154591045.Constraint no. 20383 above error tolerance 0.000100, error = 0.3731782762833.Constraint no. 20384 above error tolerance 0.000100, error = 1.4562795188562.Constraint no. 20385 above error tolerance 0.000100, error = 0.4324758465278.Constraint no. 20386 above error tolerance 0.000100, error = 0.0867946633231.Constraint no. 20387 above error tolerance 0.000100, error = 0.2422117306411.Constraint no. 20388 above error tolerance 0.000100, error = 0.8148573042700.Constraint no. 20389 above error tolerance 0.000100, error = 0.2395241877280.Constraint no. 20390 above error tolerance 0.000100, error = 0.7299294795736.Constraint no. 20391 above error tolerance 0.000100, error = 0.5750966528381.Constraint no. 20392 above error tolerance 0.000100, error = 0.0780424436051.Constraint no. 20393 above error tolerance 0.000100, error = 1.1066951628597.Constraint no. 20394 above error tolerance 0.000100, error = 0.0525672844776.Constraint no. 20395 above error tolerance 0.000100, error = 0.2807368744863.Constraint no. 20396 above error tolerance 0.000100, error = 0.1912084533486.Constraint no. 20397 above error tolerance 0.000100, error = 0.6117276179281.Constraint no. 20398 above error tolerance 0.000100, error = 0.3188478418432.Constraint no. 20399 above error tolerance 0.000100, error = 0.8539460269795.Constraint no. 20400 above error tolerance 0.000100, error = 0.1485911233798.Constraint no. 20401 above error tolerance 0.000100, error = 0.4727955796280.Constraint no. 20402 above error tolerance 0.000100, error = 0.0368788687234.Constraint no. 20403 above error tolerance 0.000100, error = 0.3027475424122.Constraint no. 20404 above error tolerance 0.000100, error = 0.0312083918034.Constraint no. 20405 above error tolerance 0.000100, error = 0.0849881185078.Constraint no. 20406 above error tolerance 0.000100, error = 0.0307212964940.Constraint no. 20407 above error tolerance 0.000100, error = 0.1205710396541.ERROR(OBJ.DES2) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(69)  :   'ParameterIdentification.ParameterOptimization'  :  Optimization failed :  Failed to solve position analysis
+#### Macro command > exit
+
+Closing model...
+Saving modified values...
+Deleting loaded model...
+...Model deleted.

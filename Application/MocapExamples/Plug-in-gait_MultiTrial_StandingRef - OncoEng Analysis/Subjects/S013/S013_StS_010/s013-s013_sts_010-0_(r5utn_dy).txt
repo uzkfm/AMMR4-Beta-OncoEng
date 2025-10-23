@@ -1,0 +1,129 @@
+########### MACRO #############
+load "main.any"
+operation Main.RunAnalysis
+run
+
+######### OUTPUT LOG ##########
+
+AnyBody Console Application
+AnyBodyCon.exe version : 8. 0. 1. 11638 (64-bit version) 
+Build : 19802.46560
+Copyright (c) 1999 - 2025 AnyBody Technology A/S
+
+Current path: C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Application\MocapExamples\Plug-in-gait_MultiTrial_StandingRef - OncoEng Analysis\Subjects\S013\S013_StS_010
+#### Macro command > load "main.any"
+Loading  Main  :  "C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Application\MocapExamples\Plug-in-gait_MultiTrial_StandingRef - OncoEng Analysis\Subjects\S013\S013_StS_010\main.any"
+Scanning...
+Parsing...
+Constructing model tree...
+Linking identifiers...
+Evaluating constants...
+Configuring model...
+Evaluating model...
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(SCR.EXP.FUN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\CheckAnyMoCapConfiguration.any(77)  :   'filter_transients_warning' : 'warn' triggered : 
+------------------------------------------------------------------------------------------------------
+    The tStart/tEnd are very close to the start/end times of the data in the C3D file. 
+    This can cause inaccurate kinematics at the very start/end of the simulation due to 
+    low-pass filter transients. Consider changing the start/end times of the simulation. 
+-------------------------------------------------------------------------------------------------------
+
+WARNING(SCR.EXP.FUN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\InitialPositions.any(71)  :   'AbductionInitialPosturePertubation' : 'warn' triggered : 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+         WARNING: Problematic start mannequin values for GlenohumeralFlexion/GlenohumeralAbduction. 
+ 
+  The initial postures (mannequin values) GlenohumeralFlexion (0 deg) and GlenohumeralAbduction (0 deg) can cause problems as initial because 
+  some measures/drivers which uses on the humurus 'plane of elevation' (i.e. shoulder rhythm) have a sigularity at these angles. 
+  
+  A small pertubation to the inital values for the humeral abduction have automatically been applied. 
+  
+  You can avoid this warning by changing the values in HumanModel.Mannequin.Posture
+  or by setting the one of the following statements to suppress either the warning or disable the automatic small pertubation: 
+      #define ANYBODY_DISABLE_HUMMERAL_ABTUCTION_PERTUBATION_WARNING 
+      #define ANYBODY_DISABLE_HUMMERAL_ABTUCTION_PERTUBATION 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Model Warning: Study 'Main.HumanModel.Calibration.ThoraxLigamentCalibration.CalibrationStudy' contains too few kinematic constraints to be kinematically determinate.
+Model Warning: Study 'Main.HumanModel.Calibration.ThoraxLigamentCalibration.CalibrationStudy' contains too few kinematic constraints to be kinematically determinate.
+Loaded successfully.
+Elapsed Time : 28.591000
+#### Macro command > operation Main.RunAnalysis
+#### Macro command > run
+
+***************************************************************************************
+0) Operation Sequence: (Operation: Main.RunAnalysis): 
+0.0) Operation Sequence: (Operation: Main.RunAnalysis.LoadParameters): 
+0.0.0) Operation Sequence: (Operation: Main.RunAnalysis.LoadParameters.SubOperations): 
+0.0.0.0) Dummy operation: (Operation: Main.RunAnalysis.LoadParameters.SubOperations.dummy): 
+0.1.0) Load_parameters (Operation: Main.ModelSetup.Macros.Load_parameters): 
+#### Macro command : Load_parameters(1:10)> classoperation Main "Load Values" --file="C:\Users\menmrk\OneDrive - University of Leeds\Research Project - OncoEng\Research OncoEng Data\OncoEng Normal Cohort\03 AnyBody Folder\Output HDF\S013\/S013_StandingRef.anyset"
+Loading and overriding values from : 'C:\Users\menmrk\OneDrive - University of Leeds\Research Project - OncoEng\Research OncoEng Data\OncoEng Normal Cohort\03 AnyBody Folder\Output HDF\S013\S013_StandingRef.anyset' ...
+...Values updated
+#### Macro command : Load_parameters(10:10)> classoperation Main "Update Values"
+Updating expressions...
+WARNING(SCR.EXP.FUN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\CheckAnyMoCapConfiguration.any(77)  :   'filter_transients_warning' : 'warn' triggered : 
+------------------------------------------------------------------------------------------------------
+    The tStart/tEnd are very close to the start/end times of the data in the C3D file. 
+    This can cause inaccurate kinematics at the very start/end of the simulation due to 
+    low-pass filter transients. Consider changing the start/end times of the simulation. 
+-------------------------------------------------------------------------------------------------------
+
+...Finished updating expressions
+1.0) Operation Sequence: (Operation: Main.RunAnalysis.MarkerTracking): 
+1.0.0) Operation Sequence: (Operation: Main.RunAnalysis.MarkerTracking.SubOperations): 
+1.0.0.0) Dummy operation: (Operation: Main.RunAnalysis.MarkerTracking.SubOperations.dummy): 
+1.0.1.0) Kinematics (Operation: Main.Studies.MarkerTracking.Kinematics): 
+1.0.1.0.0) PreOperation (Operation: Main.Studies.MarkerTracking.Kinematics.PreOperation): 
+1.0.1.0.0.0) InitialConditions (Operation: Main.Studies.MarkerTracking.InitialConditions): 
+WARNING(SCR.EXP.FUN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\CheckAnyMoCapConfiguration.any(77)  :   'filter_transients_warning' : 'warn' triggered : 
+------------------------------------------------------------------------------------------------------
+    The tStart/tEnd are very close to the start/end times of the data in the C3D file. 
+    This can cause inaccurate kinematics at the very start/end of the simulation due to 
+    low-pass filter transients. Consider changing the start/end times of the simulation. 
+-------------------------------------------------------------------------------------------------------
+
+1.0.1.0.0.0) ...Design variables have been updated.
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+1.0.1.0.0.1) ...Load-time positions have been re-established.
+1.0.1.0.0.1.0) PreOperation (Operation: Main.Studies.MarkerTracking.InitialConditions.PreOperation): 
+1.0.1.0.0.1.0.0) Operation Sequence: (Operation: Main.ModelSetup.Views.SetViewMacros.KinematicView): 
+1.0.1.0.0.1.0.0.0) mcr (Operation: Main.ModelSetup.Views.SetViewMacros.KinematicView.mcr): 
+#### Macro command : mcr(1:1)> classoperation Main.ModelSetup.Views.KinematicView"Set View"
+1.0.1.0.0.2) ...Kinematic analysis completed.
+1.0.1.0.0.3) ...Dependent variables are fully updated.
+1.0.1.0) Kinematic analysis...
+1.0.1.250) ...Kinematic analysis completed
+2.0) Operation Sequence: (Operation: Main.RunAnalysis.InverseDynamics): 
+2.0.0) Operation Sequence: (Operation: Main.RunAnalysis.InverseDynamics.SubOperations): 
+2.0.0.0) Dummy operation: (Operation: Main.RunAnalysis.InverseDynamics.SubOperations.dummy): 
+2.0.1.0) InverseDynamics (Operation: Main.Studies.InverseDynamicStudy.InverseDynamics): 
+2.0.1.0.0) PreOperation (Operation: Main.Studies.InverseDynamicStudy.InverseDynamics.PreOperation): 
+2.0.1.0.0.0) InitialConditions (Operation: Main.Studies.InverseDynamicStudy.InitialConditions): 
+WARNING(SCR.EXP.FUN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\CheckAnyMoCapConfiguration.any(77)  :   'filter_transients_warning' : 'warn' triggered : 
+------------------------------------------------------------------------------------------------------
+    The tStart/tEnd are very close to the start/end times of the data in the C3D file. 
+    This can cause inaccurate kinematics at the very start/end of the simulation due to 
+    low-pass filter transients. Consider changing the start/end times of the simulation. 
+-------------------------------------------------------------------------------------------------------
+
+2.0.1.0.0.0) ...Design variables have been updated.
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+2.0.1.0.0.1) ...Load-time positions have been re-established.
+2.0.1.0.0.1.0) PreOperation (Operation: Main.Studies.InverseDynamicStudy.InitialConditions.PreOperation): 
+2.0.1.0.0.1.0.0) Operation Sequence: (Operation: Main.ModelSetup.Views.SetViewMacros.InverseDynamicView): 
+2.0.1.0.0.1.0.0.0) mcr (Operation: Main.ModelSetup.Views.SetViewMacros.InverseDynamicView.mcr): 
+#### Macro command : mcr(1:1)> classoperation Main.ModelSetup.Views.InverseDynamicView"Set View"
+2.0.1.0.0.2) ...Kinematic analysis completed.
+2.0.1.0.0.3) ...Dependent variables are fully updated.
+2.0.1.0) Inverse dynamic analysis...
+ERROR(OBJ.MCH.MUS4) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap/AnyMocapModel.any(96)  :   'InverseDynamicStudy.InverseDynamics'  :  Muscle recruitment solver :  solver aborted due to singular KKT matrix
+#### Macro command > exit
+
+Closing model...
+Saving modified values...
+Deleting loaded model...
+...Model deleted.

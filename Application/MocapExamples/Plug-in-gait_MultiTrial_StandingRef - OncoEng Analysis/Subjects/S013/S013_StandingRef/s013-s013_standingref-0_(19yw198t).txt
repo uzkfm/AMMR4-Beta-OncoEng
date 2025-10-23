@@ -1,0 +1,96 @@
+########### MACRO #############
+load "main.any"
+operation Main.RunParameterIdentification
+run
+
+######### OUTPUT LOG ##########
+
+AnyBody Console Application
+AnyBodyCon.exe version : 8. 0. 1. 11638 (64-bit version) 
+Build : 19802.46560
+Copyright (c) 1999 - 2025 AnyBody Technology A/S
+
+Current path: C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Application\MocapExamples\Plug-in-gait_MultiTrial_StandingRef - OncoEng Analysis\Subjects\S013\S013_StandingRef
+#### Macro command > load "main.any"
+Loading  Main  :  "C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Application\MocapExamples\Plug-in-gait_MultiTrial_StandingRef - OncoEng Analysis\Subjects\S013\S013_StandingRef\main.any"
+Scanning...
+Parsing...
+Constructing model tree...
+Linking identifiers...
+Evaluating constants...
+Configuring model...
+Evaluating model...
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(SCR.EXP.FUN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\CheckAnyMoCapConfiguration.any(77)  :   'filter_transients_warning' : 'warn' triggered : 
+------------------------------------------------------------------------------------------------------
+    The tStart/tEnd are very close to the start/end times of the data in the C3D file. 
+    This can cause inaccurate kinematics at the very start/end of the simulation due to 
+    low-pass filter transients. Consider changing the start/end times of the simulation. 
+-------------------------------------------------------------------------------------------------------
+
+WARNING(SCR.EXP.FUN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\InitialPositions.any(71)  :   'AbductionInitialPosturePertubation' : 'warn' triggered : 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+         WARNING: Problematic start mannequin values for GlenohumeralFlexion/GlenohumeralAbduction. 
+ 
+  The initial postures (mannequin values) GlenohumeralFlexion (0 deg) and GlenohumeralAbduction (0 deg) can cause problems as initial because 
+  some measures/drivers which uses on the humurus 'plane of elevation' (i.e. shoulder rhythm) have a sigularity at these angles. 
+  
+  A small pertubation to the inital values for the humeral abduction have automatically been applied. 
+  
+  You can avoid this warning by changing the values in HumanModel.Mannequin.Posture
+  or by setting the one of the following statements to suppress either the warning or disable the automatic small pertubation: 
+      #define ANYBODY_DISABLE_HUMMERAL_ABTUCTION_PERTUBATION_WARNING 
+      #define ANYBODY_DISABLE_HUMMERAL_ABTUCTION_PERTUBATION 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Model Warning: Study 'Main.HumanModel.Calibration.ThoraxLigamentCalibration.CalibrationStudy' contains too few kinematic constraints to be kinematically determinate.
+Model Warning: Study 'Main.HumanModel.Calibration.ThoraxLigamentCalibration.CalibrationStudy' contains too few kinematic constraints to be kinematically determinate.
+Loaded successfully.
+Elapsed Time : 29.604000
+#### Macro command > operation Main.RunParameterIdentification
+#### Macro command > run
+
+***************************************************************************************
+0) Operation Sequence: (Operation: Main.RunParameterIdentification): 
+0.0) Operation Sequence: (Operation: Main.RunParameterIdentification.ParameterIdentification): 
+0.0.0) Dummy operation: (Operation: Main.RunParameterIdentification.ParameterIdentification.placeholder_operation): 
+0.1.0) Kinematic optimization (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+0.1.0.0) Operation Sequence: (Operation: Main.Studies.ParameterIdentification.Analysis): 
+0.1.0.0.0) Kinematics (Operation: Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.Kinematics): 
+0.1.0.0.0.0) PreOperation (Operation: Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.Kinematics.PreOperation): 
+0.1.0.0.0.0.0) InitialConditions (Operation: Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.InitialConditions): 
+0.1.0.0.0.0.0) ...Design variables have been updated.
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+WARNING(OBJ.MCH.KIN6) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Body\AAUHuman\Arm\Interface.any(216)  :   'GHRot'  :  Close to singular position  :  Orientation close to Gimbal Lock, i.e., first and third axis of rotation being parallel
+0.1.0.0.0.0.1) ...Load-time positions have been re-established.
+0.1.0.0.0.0.1.0) PreOperation (Operation: Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.InitialConditions.PreOperation): 
+0.1.0.0.0.0.1.0.0) Operation Sequence: (Operation: Main.ModelSetup.Views.SetViewMacros.KinematicView): 
+0.1.0.0.0.0.1.0.0.0) mcr (Operation: Main.ModelSetup.Views.SetViewMacros.KinematicView.mcr): 
+#### Macro command : mcr(1:1)> classoperation Main.ModelSetup.Views.KinematicView"Set View"
+0.1.0.0.0.0.2) ...Kinematic analysis completed.
+0.1.0.0.0.0.3) ...Dependent variables are fully updated.
+0.1.0.0.0) Kinematic analysis...
+Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Kinematic solver fallback: Restarting solution of kinematic optimality conditions and hard constraints.Failed to solve kinematic optimality conditions and hard constraints after 10 fallback attempts.
+Constraint violations for study 'Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification' : 
+ERROR(OBJ.MCH.KIN3) :   C:\Users\menmrk\Documents\AnyBody.8.0.x\AMMR4-Beta-OncoEng\Tools\AnyMoCap\KinematicStudyForParameterIdentification.any(11)  :   'KinematicStudyForParameterIdentification.Kinematics'  :  Kinematic analysis failed in time step 13 : Position analysis is not completed
+0.1.0.0.13) ...Kinematic analysis terminated
+0.1.0.0) Optimization (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+0.1.0.0.0) Optimization step (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+0.1.0.0.0.0) Evaluating KKT conditions (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+0.1.0.0.0.0) Evaluating the objective function (Operation: Main.Studies.ParameterIdentification.ParameterOptimization): 
+Optimization converged
+1.0) Operation Sequence: (Operation: Main.RunParameterIdentification.SaveParameters): 
+1.0.0) Dummy operation: (Operation: Main.RunParameterIdentification.SaveParameters.placeholder_operation): 
+1.1.0) Save_parameters (Operation: Main.ModelSetup.Macros.Save_parameters): 
+#### Macro command : Save_parameters(1:1)> classoperation Main"Save Values"--file="C:\Users\menmrk\OneDrive - University of Leeds\Research Project - OncoEng\Research OncoEng Data\OncoEng Normal Cohort\03 AnyBody Folder\Output HDF\S013\/S013_StandingRef.anyset"
+Saving modified values to 'C:\Users\menmrk\OneDrive - University of Leeds\Research Project - OncoEng\Research OncoEng Data\OncoEng Normal Cohort\03 AnyBody Folder\Output HDF\S013\S013_StandingRef.anyset'
+
+***************************************************************************************
+#### Macro command > exit
+
+Closing model...
+Saving modified values...
+Deleting loaded model...
+...Model deleted.
