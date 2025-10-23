@@ -1,0 +1,160 @@
+
+
+SelectedOutput.Trunk = {
+  
+  /// The joint reaction force is expressed in the local reference frame on the proximal segment in the joint.
+  /// This reference frame (RotNode) is located inside the joint node on the proximal segment and aligned with
+  /// the vertebral body of the vertebra to compute the compression and shear force on the vertebra.
+  /// The force is acting on the distal segment due to the proximal segment.
+  AnyFolder JointReactionForce = {
+    
+    /// Lateral (right) positive
+    AnyVar SacrumPelvisMedioLateralShearForce = ...Trunk.Joints.Lumbar.SacrumPelvis.Constraints.Reaction.Fout[2];
+    /// Distal (superior) positive
+    AnyVar SacrumPelvisCompressionForce = ...Trunk.Joints.Lumbar.SacrumPelvis.Constraints.Reaction.Fout[1];
+    /// Anterior positive
+    AnyVar SacrumPelvisAnteroPosteriorShearForce = ...Trunk.Joints.Lumbar.SacrumPelvis.Constraints.Reaction.Fout[0];
+    //Pelvis ref
+    
+    /// Lateral (right) positive
+    AnyVar L5SacrumMedioLateralShearForce = ...Trunk.Joints.Lumbar.L5Sacrum.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar L5SacrumCompressionForce = ...Trunk.Joints.Lumbar.L5Sacrum.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar L5SacrumAnteroPosteriorShearForce = ...Trunk.Joints.Lumbar.L5Sacrum.ReactionForceRotated.Flocal[0];
+    //Sacrum ref
+    
+    /// Lateral (right) positive
+    AnyVar L4L5MedioLateralShearForce = ...Trunk.Joints.Lumbar.L4L5.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar L4L5CompressionForce = ...Trunk.Joints.Lumbar.L4L5.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar L4L5AnteroPosteriorShearForce = ...Trunk.Joints.Lumbar.L4L5.ReactionForceRotated.Flocal[0];
+    //L5 ref
+
+    /// Lateral (right) positive
+    AnyVar L3L4MedioLateralShearForce = ...Trunk.Joints.Lumbar.L3L4.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar L3L4CompressionForce = ...Trunk.Joints.Lumbar.L3L4.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar L3L4AnteroPosteriorShearForce = ...Trunk.Joints.Lumbar.L3L4.ReactionForceRotated.Flocal[0];
+    //L4 ref
+    
+    
+    /// Lateral (right) positive
+    AnyVar L2L3MedioLateralShearForce = ...Trunk.Joints.Lumbar.L2L3.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar L2L3CompressionForce = ...Trunk.Joints.Lumbar.L2L3.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar L2L3AnteroPosteriorShearForce = ...Trunk.Joints.Lumbar.L2L3.ReactionForceRotated.Flocal[0];
+    //L3 ref
+    
+    /// Lateral (right) positive
+    AnyVar L1L2MedioLateralShearForce = ...Trunk.Joints.Lumbar.L1L2.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar L1L2CompressionForce = ...Trunk.Joints.Lumbar.L1L2.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar L1L2AnteroPosteriorShearForce = ...Trunk.Joints.Lumbar.L1L2.ReactionForceRotated.Flocal[0];
+    //L2 ref
+    
+    /// Lateral (right) positive
+    AnyVar T12L1MedioLateralShearForce = ...Trunk.Joints.Lumbar.T12L1.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar T12L1CompressionForce = ...Trunk.Joints.Lumbar.T12L1.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar T12L1AnteroPosteriorShearForce = ...Trunk.Joints.Lumbar.T12L1.ReactionForceRotated.Flocal[0];
+    //L1 ref
+    
+    /// Lateral (right) positive
+    AnyVar C7T1MedioLateralShearForce = ...Trunk.Joints.Cervical.T1C7.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar C7T1CompressionForce = ...Trunk.Joints.Cervical.T1C7.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar C7T1AnteroPosteriorShearForce = ...Trunk.Joints.Cervical.T1C7.ReactionForceRotated.Flocal[0];
+    //Thorax ref
+    
+    /// Lateral (right) positive
+    AnyVar C6C7MedioLateralShearForce = ...Trunk.Joints.Cervical.C7C6.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar C6C7CompressionForce = ...Trunk.Joints.Cervical.C7C6.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar C6C7AnteroPosteriorShearForce = ...Trunk.Joints.Cervical.C7C6.ReactionForceRotated.Flocal[0];
+    //C7 ref
+    
+    /// Lateral (right) positive
+    AnyVar C5C6MedioLateralShearForce = ...Trunk.Joints.Cervical.C6C5.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar C5C6CompressionForce = ...Trunk.Joints.Cervical.C6C5.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar C5C6AnteroPosteriorShearForce = ...Trunk.Joints.Cervical.C6C5.ReactionForceRotated.Flocal[0];
+    //C6 ref
+    
+    /// Lateral (right) positive
+    AnyVar C4C5MedioLateralShearForce = ...Trunk.Joints.Cervical.C5C4.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar C4C5CompressionForce = ...Trunk.Joints.Cervical.C5C4.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar C4C5AnteroPosteriorShearForce = ...Trunk.Joints.Cervical.C5C4.ReactionForceRotated.Flocal[0];
+    //C5 ref
+    
+    /// Lateral (right) positive
+    AnyVar C3C4MedioLateralShearForce = ...Trunk.Joints.Cervical.C4C3.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar C3C4CompressionForce = ...Trunk.Joints.Cervical.C4C3.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar C3C4AnteroPosteriorShearForce = ...Trunk.Joints.Cervical.C4C3.ReactionForceRotated.Flocal[0];
+    //C4 ref
+    
+    /// Lateral (right) positive
+    AnyVar C2C3MedioLateralShearForce = ...Trunk.Joints.Cervical.C3C2.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar C2C3CompressionForce = ...Trunk.Joints.Cervical.C3C2.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar C2C3AnteroPosteriorShearForce = ...Trunk.Joints.Cervical.C3C2.ReactionForceRotated.Flocal[0];
+    //C3 ref
+    
+    /// Lateral (right) positive
+    AnyVar C1C2MedioLateralShearForce = ...Trunk.Joints.Cervical.C2C1.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar C1C2CompressionForce = ...Trunk.Joints.Cervical.C2C1.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar C1C2AnteroPosteriorShearForce = ...Trunk.Joints.Cervical.C2C1.ReactionForceRotated.Flocal[0];
+    /// Extension positive
+    AnyVar C1C2FlexionExtensionMoment = -1*(...Trunk.Joints.Cervical.C2C1.Constraints.Reaction.RefFrameOutput.M[0]*...Trunk.Joints.Cervical.C2C1.C2Node.RotNode.Axes)[2];
+    /// Right positive
+    AnyVar C1C2LateralMoment = -1*(...Trunk.Joints.Cervical.C2C1.Constraints.Reaction.RefFrameOutput.M[0]*...Trunk.Joints.Cervical.C2C1.C2Node.RotNode.Axes)[0];
+    //C2 ref
+    
+    /// Lateral (right) positive
+    AnyVar C0C1MedioLateralShearForce = ...Trunk.Joints.Cervical.C1C0.ReactionForceRotated.Flocal[2];
+    /// Distal (superior) positive
+    AnyVar C0C1CompressionForce = ...Trunk.Joints.Cervical.C1C0.ReactionForceRotated.Flocal[1];
+    /// Anterior positive
+    AnyVar C0C1AnteroPosteriorShearForce = ...Trunk.Joints.Cervical.C1C0.ReactionForceRotated.Flocal[0];
+    /// Left positive
+    AnyVar C0C1AxialMoment = -1*(...Trunk.Joints.Cervical.C1C0.Constraints.Reaction.RefFrameOutput.M[0]*...Trunk.Joints.Cervical.C1C0.C1Node.RotNode.Axes)[1];
+    /// Right positive
+    AnyVar C0C1LateralMoment = -1*(...Trunk.Joints.Cervical.C1C0.Constraints.Reaction.RefFrameOutput.M[0]*...Trunk.Joints.Cervical.C1C0.C1Node.RotNode.Axes)[0];
+    //C1 ref
+    
+    
+  }; //End JointReactionForce
+  
+
+
+  AnyFolder JointMomentMeasure = {
+  
+    AnyVar SacrumPelvisFlexionExtensionMoment = ...Trunk.Joints.Lumbar.SacrumPelvisReaction.Fout[2];
+    AnyVar SacrumPelvisAxialMoment = ...Trunk.Joints.Lumbar.SacrumPelvisReaction.Fout[1];
+    AnyVar SacrumPelvisLateralMoment = ...Trunk.Joints.Lumbar.SacrumPelvisReaction.Fout[0];
+  
+  }; //End JointMomentMeasure
+  
+  
+  AnyFolder Muscles = {}; //End Muscles
+  
+}; //End Trunk
+
+#if BM_COMPATIBILITY_24_TRUNK_SELECTED_OUTPUTS_JRF == ON
+#include "TrunkSelectedOutput_Compatibility24.any"
+#endif

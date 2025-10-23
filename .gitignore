@@ -1,0 +1,19 @@
+Application/Beta/
+Application/Examples/
+Application/Validation/
+Application/MocapExamples/ADL_Gait_*/
+Application/MocapExamples/BVH_BoxLift/
+Application/MocapExamples/BVH_Xsens/
+Application/MocapExamples/BVH_Xsens_OptimizeOrigin/
+Application/MocapExamples/Plug-in-gait_FlexibleThorax/
+Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef/
+Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef - Deprecated/
+Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef - OncoEng Feasibility Study - Template/
+Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef - OncoEng Feasibility Study I/
+Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef - OncoEng Feasibility Study II/
+Application/MocapExamples/Plug-in-gait_Simple/
+Application/MocapExamples/SpecialFeatures/
+
+Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef - OncoEng Analysis/Subjects/*
+!Application/MocapExamples/Plug-in-gait_MultiTrial_StandingRef - OncoEng Analysis/Subjects/SX - Template
+
